@@ -1,9 +1,9 @@
-import Navbar2 from "../components/Navbar/Navbar2";
+import Navbar1 from "../components/Navbar/Navbar1";
 
 function HeliCharter() {
   return (
     <>
-      <Navbar2 />
+      <Navbar1 />
       <div className="text-8xl">Heli charter</div>
     </>
   );
