@@ -1,0 +1,38 @@
+{
+  "logo": {
+    "url": "/global.png",
+    "text": "Nepal Travel"
+  },
+  "links": [
+    {
+      "name": "Home",
+      "url": "/",
+      "isActive": true
+    },
+    {
+      "name": "Vehicle Rental",
+      "url": "/vehicle_rental",
+      "isActive": false
+    },
+    {
+      "name": "Heli Charter",
+      "url": "/heli_charter",
+      "isActive": false
+    },
+    {
+      "name": "Day Tours",
+      "url": "/day_tours",
+      "isActive": false
+    },
+    {
+      "name": "Company",
+      "url": "/company",
+      "isActive": false
+    },
+    {
+      "name": "Tarrif Rate",
+      "url": "/tariff_rates",
+      "isActive": false
+    }
+  ]
+}
