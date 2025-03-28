@@ -33,6 +33,16 @@
       "name": "Tarrif Rate",
       "url": "/tariff_rates",
       "isActive": false
+    },
+    {
+      "name": "Blog",
+      "url": "/blogs",
+      "isActive": false
+    },
+    {
+      "name": "APIs",
+      "url": "/api",
+      "isActive": false
     }
   ]
 }

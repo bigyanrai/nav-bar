@@ -7,6 +7,14 @@ function Navbar2() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  // Calculate the required height for the mobile menu
+  const linkCount = navData.links.length;
+  const linkHeight = 40; // Approximate height per link (py-2 = 16px + content height, rounded up)
+  const gapHeight = 8; // space-y-2 = 0.5rem = 8px
+  const paddingHeight = 32; // pt-4 + pb-4 = 16px + 16px = 32px
+  const totalHeight =
+    linkCount * linkHeight + (linkCount - 1) * gapHeight + paddingHeight;
+
   return (
     <>
       {/* Spacer div to reserve space in the document flow */}
@@ -77,8 +85,9 @@ function Navbar2() {
 
         <div
           className={`md:hidden transition-all duration-300 ease-in-out ${
-            isOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
-          } overflow-hidden bg-white dark:bg-gray-900`} // Increased max height
+            isOpen ? "opacity-100" : "max-h-0 opacity-0"
+          } overflow-hidden bg-white dark:bg-gray-900`}
+          style={{ maxHeight: isOpen ? `${totalHeight}px` : "0px" }}
         >
           <div className="px-4 pt-4 pb-4 space-y-2">
             {navData.links.map((link) => (

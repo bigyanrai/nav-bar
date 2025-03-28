@@ -7,6 +7,8 @@ import DayTours from "./pages/DayTours";
 import Company from "./pages/Company";
 import TariffRate from "./pages/TariffRate";
 import OnlinePayment from "./pages/OnlinePayment";
+import Blog from "./pages/Blog";
+import Api from "./pages/Api";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
         <Route path="company" element={<Company />} />
         <Route path="tariff_rates" element={<TariffRate />} />
         <Route path="online_payment" element={<OnlinePayment />} />
+        <Route path="blogs" element={<Blog />} />
+        <Route path="api" element={<Api />} />
       </Routes>
     </BrowserRouter>
   );
