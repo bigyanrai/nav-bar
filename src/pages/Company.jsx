@@ -1,11 +1,11 @@
 import Navbar1 from "../components/Navbar/Navbar1";
-
+import Navbar2 from "../components/Navbar/Navbar1";
 function Company() {
   return (
-    <div className="border-3 border-green-600">
-      <Navbar1 />
+    <>
+      <Navbar2 />
       <div className="text-5xl">Company</div>
-    </div>
+    </>
   );
 }
 

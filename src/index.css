@@ -11,3 +11,8 @@
 body {
   background-color: E1E5E833
 }
+
+.active {
+  background-color: #E1E5E833;
+  color: black
+}

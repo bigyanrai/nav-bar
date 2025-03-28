@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import navData from "../../data/navData.json";
 import { Link, useLocation } from "react-router-dom";
 
-function Navbar1({ children }) {
+function Navbar1() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <>
       {/* Fixed Navbar at top */}
-      <nav className="bg-white shadow-sm py-4 px-4 md:px-6 lg:px-8 border border-black fixed top-0 left-0 right-0 z-50">
+      <nav className="bg-white shadow-lg py-4 px-4 md:px-6 lg:px-8 fixed top-0 left-0 right-0 z-50">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           {/* Logo */}
           <div>
@@ -33,14 +33,10 @@ function Navbar1({ children }) {
                       h-[38px] w-[138px]
                       p-[10px] rounded-[70px]
                       text-base
-                      ${
-                        isActive
-                          ? "bg-[#E1E5E833] text-black"
-                          : "hover:bg-gray-100"
-                      }
+                      ${isActive ? "text-[#087DC2]" : "text-black"}
+                      hover:text-[#087DC2]
                       transition-all duration-300 ease-in-out
-                      hover:bg-[#E1E5E833]
-                      hover:scale-105
+                      hover:text-[1.075rem]
                     `}
                   >
                     {link.name}
@@ -84,13 +80,11 @@ function Navbar1({ children }) {
       {/* Mobile Menu and Overlay */}
       {isMenuOpen && (
         <>
-          {/* Blur overlay for content */}
+          {/* Blur overlay for content - Hidden on lg and above */}
           <div
-            className="fixed inset-0  bg-opacity-30 backdrop-blur-sm z-40"
+            className="lg:hidden fixed inset-0 bg-opacity-30 backdrop-blur-sm z-40"
             onClick={() => setIsMenuOpen(false)}
-          >
-            children
-          </div>
+          ></div>
 
           {/* Mobile Menu Sidebar */}
           <div className="lg:hidden fixed inset-y-0 right-0 w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out">
@@ -115,7 +109,7 @@ function Navbar1({ children }) {
               </button>
             </div>
 
-            <ul className="mt-4  space-y-4 px-4">
+            <ul className="mt-4 space-y-4 px-4">
               {navData.links.map((link, index) => {
                 const isActive = location.pathname === link.url;
                 return (
@@ -127,13 +121,10 @@ function Navbar1({ children }) {
                         h-[38px] w-full
                         p-[10px] rounded-[70px]
                         text-sm md:text-base
-                        ${
-                          isActive
-                            ? "bg-[#E1E5E833] text-black"
-                            : "hover:bg-gray-100"
-                        }
+                        ${isActive ? "text-[#087DC2]" : "text-black"}
+                        hover:text-[#087DC2]
                         transition-all duration-300 ease-in-out
-                        hover:bg-[#E1E5E833]
+                        hover:text-[1.075rem]
                       `}
                       onClick={() => setIsMenuOpen(false)}
                     >
@@ -152,9 +143,7 @@ function Navbar1({ children }) {
         className={`mt-16 transition-opacity duration-300 ${
           isMenuOpen ? "opacity-30" : "opacity-100"
         }`}
-      >
-        {children}
-      </div>
+      ></div>
     </>
   );
 }

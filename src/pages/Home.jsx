@@ -1,11 +1,15 @@
 import Navbar1 from "../components/Navbar/Navbar1";
+import Navbar2 from "../components/Navbar/Navbar2";
 
 function Home() {
   return (
     <div>
-      <Navbar1>
-        <div className="text-8xl bg-gray-100 h-dvh">Home</div>
-      </Navbar1>
+      <Navbar2 />
+      <div className="text-8xl bg-gray-100">Home</div>
+      <img src="/jaguar.jpg" className="w-full"></img>
+      <img src="/jaguar.jpg" className="w-full"></img>
+      <img src="/jaguar.jpg" className="w-full"></img>
+      <img src="/jaguar.jpg" className="w-full"></img>
     </div>
   );
 }

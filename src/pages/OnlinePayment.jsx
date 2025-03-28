@@ -1,9 +1,10 @@
 import Navbar1 from "../components/Navbar/Navbar1";
+import Navbar2 from "../components/Navbar/Navbar1";
 
 function OnlinePayment() {
   return (
     <>
-      <Navbar1 />
+      <Navbar2 />
       <div className="text-8xl">Online payment</div>
     </>
   );
